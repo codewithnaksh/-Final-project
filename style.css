@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  /* height: 100%; */
+  /* we will not give height cause we will use locomotive JS */
+}
+#home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#home #circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+}
+#circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#top {
+  position: absolute;
+  /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-180deg); */
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+/* #top img{
+    transform: translate(-50%,-50%) rotate(-180deg);
+} */
+#top {
+  position: absolute;
+  /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(150, 46, 46, 0.329); */
+}
+#btm img:nth-child(1) {
+  transform: translate(-50%, -50%) scale(2);
+}
+#btm img:nth-child(2) {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+#btm img:nth-child(3) {
+  transform: translate(-50%, -50%) scale(1);
+}
+#top img:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-180deg) scale(2);
+}
+#top img:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-180deg) scale(1.5);
+}
+#top img:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-180deg) scale(1);
+}
+#smCircle {
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: red; */
+  width: 100%;
+  height: 100px;
+  z-index: 99;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000b0;
+  font-weight: 600;
+  line-height: 1;
+}
+#blocks {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: center;
+}
+.block {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
+#blocks .block:nth-child(1) {
+  opacity: 0.2;
+}
+#blocks .block:nth-child(2) {
+  opacity: 0.36;
+}
+#blocks .block:nth-child(3) {
+  opacity: 0.52;
+}
+#blocks .block:nth-child(4) {
+  opacity: 0.68;
+}
+#blocks .block:nth-child(5) {
+  opacity: 0.84;
+}
+#blocks .block:nth-child(6) {
+  opacity: 1;
+}
+#nav-text {
+  /* background-color: aqua; */
+  width: 120px;
+  /* height: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1vw;
+  /* gap: 15px; */
+}
+#btm-nav {
+  width: 100%;
+  height: 100px;
+  /* background-color: rgba(0, 0, 0, 0.24); */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#btm-nav img:nth-child(1) {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+#btm-nav img:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+#center-img {
+  width: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  /* background-color: red; */
+}
+#center-img h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+#center-img #cimage {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+#cimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#overlay > h1 {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, 0%);
+  line-height: 1;
+  z-index: 99;
+  font-size: 8rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #d5a7b4;
+  pointer-events: none;
+  text-transform: uppercase;
+  /* width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center; */
+}
+#gola {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-color: #d5a7b4;
+  position: absolute;
+  z-index: 99;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#overlay > h1#pf {
+  font-size: 10rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  position: absolute;
+  z-index: 99;
+  bottom: -50%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  transform: rotate(30deg);
+  transform-origin: 0% 50%;
+  /* O% on the X-axis and 50% from the right */
+}
+#pink-div {
+  position: absolute;
+  left: 0;
+  top: 120%;
+  z-index: 98;
+  width: 30vw;
+  height: 30vw;
+  background-color: #d5a7b4;
+  padding: 4vw;
+}
+#pink-div-layer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  color: white;
+}
+#pink-div-btm {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#pink-div-btm span {
+  display: flex;
+}
+#pink-div-btm span sup {
+  line-height: 0;
+  font-size: 0.85rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#pink-div-btm span p {
+  font-size: 2.1rem;
+  font-family: DS-Digital;
+}
+#pink-div-top {
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* width: 50%; */
+  /* background-color: red; */
+}
+#pink-div-top h5 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+#pink-div-top-info {
+  padding-left: 2rem;
+}
+#pink-div-top-info p:first-child {
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+}
+#pink-div-top-info p:last-child {
+  font-weight: 600;
+}
+#second {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #000; */
+}
+#second-top {
+  width: 100%;
+  height: 65%;
+  /* background-color: #dadada; */
+  position: relative;
+  border-bottom: 1px solid #dadada;
+  font-family: "Neue Haas Grotesk Text Pro";
+  overflow: hidden;
+}
+#second-btm {
+  width: 100%;
+  height: 35%;
+  /* background-color: #cd363682; */
+  position: relative;
+  font-family: "Neue Haas Grotesk Text Pro";
+}
+.balls {
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: red; */
+}
+#second-top .purple {
+  left: 45%;
+  background-color: #b4aad5;
+}
+#second-top .pink {
+  left: 55%;
+  background-color: #d5a7b4;
+}
+#second-btm p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1;
+}
+#second-btm p:nth-child(2) {
+  opacity: 0;
+}
+#second-top h1 {
+  color: #fff;
+  font-size: 25vw;
+  font-weight: 100;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  z-index: 99;
+}
+
+
+@media(max-width: 500px){
+    .nav{
+        padding: 0 3vw;
+        height: 70px;
+    }
+    .nav h1{
+        font-size: 4vw;
+    }
+    #center-img{
+        width: 80vw;
+    }
+    #center-img h5{
+        margin-bottom: 5px;
+    }
+    #cimage{
+        height: 180px;
+    }
+    #btm-nav{
+        padding: 5px 20px;
+    }
+    #pink-div{
+        width: 80vw;
+    }
+    #overlay>h1{
+        bottom: 12%;
+        font-weight: 900;
+        font-size: 14vw;
+    }
+    #overlay > h1#pf {
+        /* font-weight: 900; */
+        font-size: 14vw;
+        letter-spacing: normal;
+        left: 12%;
+    }
+    #gola{
+        width: 25vw;
+        height: 25vw;
+    }
+    #circle{
+        width: 110vw;
+        height: 110vw;
+    }
+    #smCircle{
+        width: 75vw;
+        height: 75vw;
+    }
+    #second-btm{
+        font-size: 5vw;
+        width: 90%;
+
+    }
+    .balls{
+        width: 34vw;
+        height: 34vw;
+    }
+    #second-top h1{
+        font-size: 55vw;
+        
+    }
+}
